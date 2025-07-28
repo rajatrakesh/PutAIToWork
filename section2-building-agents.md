@@ -13,8 +13,6 @@ In this section, you'll learn how to build AI agents and wrap them in use cases 
 3. Select the **AI Agents** tab
 4. Click **"New"**
 
-![AI Agent Studio Overview](screenshots/ai-agent-studio-overview.png)
-
 ### Step 2: Configure the New AI Agent
 
 A configuration page for "New AI agent" will open. Complete the fields with the information below:
@@ -36,8 +34,6 @@ You are a hospital concierge whose job is to provide directions to specific depa
 4. Give the outputted directions to the visitor as a numbered list.
 ```
 
-![New AI Agent Configuration](screenshots/new-ai-agent-config.png)
-
 > **Tip:** If you do not see the entry field for "AI Agent Role", you may be in the wrong section! Check the upper left corner of the screen and confirm that you are in the "New AI Agent" setup.
 
 ### Step 3: Save and Continue
@@ -54,8 +50,6 @@ You are a hospital concierge whose job is to provide directions to specific depa
 7. In **Define availability**, make sure the status is toggled to **On**
 8. Click **Save and Test**
 
-![Define Availability](screenshots/define-availability.png)
-
 ### Step 6: Test the Agent
 
 Now let's test the agent!
@@ -64,8 +58,6 @@ Now let's test the agent!
 2. Click **Start test**
 3. When asked, type in any department name, e.g., `radiology`, and press enter
 4. Once the conversation is finished, take your time to expand and read through the entire AI agent decisions log
-
-![Agent Test Results](screenshots/agent-test-results.png)
 
 **Understanding the Decision Log:**
 - **Thought:** A recap on the overall mission of the agent followed by what the Agent thinks needs to be done next
@@ -180,8 +172,6 @@ Now let's test the agent!
 1. In the **Task box** enter: `Help me resolve INC0010248`
 2. Click **Start test**
 
-![Incident Solution Recommender Test](screenshots/incident-solution-test.png)
-
 ## Section 2.2.3 Wrap Your AI Agent in a Use Case
 
 ### Step 1: Create a Use Case
@@ -228,8 +218,6 @@ Now let's test your new use case!
 2. In the **Task box** enter: `INC0010248`
 3. Click **Start test**
 
-![Use Case Test Results](screenshots/use-case-test-results.png)
-
 ## Section 2.3 Extra - Build an AI Agent that Checks Outages
 
 **Advanced Exercise:** Have the AI agent check for outages in similar incidents and if found, ask the user if they want to create an outage for the incident being resolved.
@@ -248,6 +236,9 @@ First, let's create an outage in incident INC0010248.
 5. In the **Outage New record** page:
    - Select **Degradation** from the Type list
    - Fill in the **Task number** field with the incident number `INC0010248`
+
+![Create New Outage](screenshots/outage-degradation.png)   
+   
 6. Click **Submit**
 7. Click the **Update** button to return to the incidents list
 
@@ -256,10 +247,13 @@ First, let's create an outage in incident INC0010248.
 Now, we need to switch scope to "Platform AI Agents and Skills".
 
 1. Click the **Application Scope** icon at the top of the page
+
+![Application Scope Selection](screenshots/application-scope-selection.png)
+
 2. Select **Application scope: Global**
 3. Filter for and select **Platform AI Agents and Skills**
 
-![Application Scope Selection](screenshots/application-scope-selection.png)
+![Application Scope Selection](screenshots/application-scope-selection-a.png)
 
 > **NOTE:** If you can't find the scope "Platform AI Agents and Skills", please check [Appendix A4](appendix-a4-application-scope.md) at the end of the document.
 
@@ -271,6 +265,8 @@ Now let's go to Flow Designer and modify the existing "Get Similar records" acti
 2. Under the **Actions** tab, find **"Get Similar Records"** and open it
    
    > **Important:** DO NOT OPEN "Get Similar Incident Records" (Hint: Get Similar Records should be on page 16)
+   
+![Copy Flow Action](screenshots/select-similar-records.png)
 
 3. Copy the action by clicking on the **three dots (...)** in the top right of the page
 
@@ -278,13 +274,20 @@ Now let's go to Flow Designer and modify the existing "Get Similar records" acti
 
 4. Change the action name to `[Your initials] Get Similar Records and Outages`
 5. Be sure that **"Platform AI Agents and Skills"** is the Application selected
+
+![Copy Flow Action](screenshots/create-copy-of-action.png)
+
 6. Click **Copy**
 
 ### Update Script Step
 
 7. On the left, click **Script Step**
 
+![Copy Flow Action](screenshots/script-step.png)
+
 **IMPORTANT:** Please use the script text box below to copy/paste. IF YOU HAVE ISSUES AND ERRORS WHEN COPY AND PASTING, PLEASE SEARCH 'SCRIPT FOR LAB' IN THE UPPER RIGHT HAND SEARCH BOX
+
+![Copy Flow Action](screenshots/search-lab-script.png)
 
 Otherwise try to replace the existing script with this one:
 
@@ -391,6 +394,9 @@ outputs.outage_details = allOutagesReport;
 ### Configure Output Variables
 
 8. In the **Output Variables** window (below the Script window), delete both existing variables, and create the following:
+
+![Output Variables Configuration](screenshots/create-output-variable.png)
+
 9. On the left, click **Outputs**, then click **Edit Outputs**
 10. Delete the message output (confirm the popup window)
 11. Change the label from "References" to **"similar records"**
@@ -402,28 +408,42 @@ outputs.outage_details = allOutagesReport;
 ![Output Variables Configuration](screenshots/output-variables-config.png)
 
 13. Click on **Exit Edit Mode**
-14. Drag and drop the script step variables from the right into their corresponding boxes in the middle
+14. Drag and drop the script step variables from the right into their corresponding boxes in the middle, like this:
+
+![Output Variables Configuration](screenshots/action-output-field-drag.png)
 
 ### Test the Flow Action
 
 15. Click **Test**
 16. Type `incident` into the type field, and `INC0010004` into the record_number field
 17. Click **Run Test**
+
+![Output Variables Configuration](screenshots/test-action.png)
+
 18. When it appears, click **"Your test has finished running. View the Action execution details."**
 
-Your results should show outage information for similar incidents.
+Your results should show outage information for similar incidents. The results should look like:
+
+![Output Variables Configuration](screenshots/test-for-similar-outage.png)
 
 19. Return to the previous window, and click **Save**, then **Publish**
 20. Close the Workflow Studio browser tab, and return to the main lab browser tab
 21. Let's change the **Application Scope** back to **Global**
+
+![Output Variables Configuration](screenshots/reset-application-scope.png)
 
 ### Create Outage Flow Action
 
 Now let's create another Flow Action for creating an outage.
 
 1. Open **Flow Designer** (All > Flow Designer) and search for **"outage"** under the Actions tab
+
+![Output Variables Configuration](screenshots/all-actions.png)
+
 2. Click on **Create Outage** and copy the action
 3. Name it `[Your Initials] Create outage`
+
+![Output Variables Configuration](screenshots/create-copy-of-outage.png)
 
 ### Configure Create Outage Action
 
@@ -432,10 +452,14 @@ Now let's create another Flow Action for creating an outage.
    - "type"
    - "begin"
 
+![Output Variables Configuration](screenshots/action-input-step.png)
+
 4. On the left, click **Script Step** and delete the following variables:
    - "cmdbCI"
    - "type"
    - "begin"
+
+![Output Variables Configuration](screenshots/runtime-instance.png)   
 
 5. Replace the existing script with this one:
 
@@ -463,14 +487,20 @@ outputs.outagerecordnumber = outage.getValue("number");
    - **Type:** String
    - **Mandatory:** True
 
+![Output Variables Configuration](screenshots/outage-record-number.png) 
+
 7. On the left, click **Outputs**, then **Edit Outputs**, then **Create Output**
 8. Edit the new Output with the following values:
    - **Label:** `Outage Number`
    - **Name:** `outage_number`
    - **Type:** String
 
+![Output Variables Configuration](screenshots/reference-outage.png) 
+
 9. Click **Exit Edit Mode**
 10. Drag the **"OutageRecordNumber"** Script variable to the **Outage Number** Action Output box
+
+![Output Variables Configuration](screenshots/highlight-outage-record-number.png) 
 
 ### Test Create Outage Action
 
@@ -479,6 +509,8 @@ outputs.outagerecordnumber = outage.getValue("number");
 13. When it appears, click **"Your test has finished running. View the Action execution details."**
 
 Your results should show the created outage details.
+
+![Output Variables Configuration](screenshots/config-runtime-value.png) 
 
 14. Return to the previous window, and click **Save**, then **Publish**
 15. Close the Workflow Studio browser tab, and return to the main lab browser tab
@@ -493,6 +525,9 @@ Now, let's open AI Agent Studio and build another AI agent. This time we will du
 2. Click the **Create and Manage** module
 3. Click on the **AI Agent** tab
 4. Click the **duplicate** button next to the previously created AI agent "Incident Solution Recommender"
+
+![Output Variables Configuration](screenshots/manage-use-cases.png) 
+
 5. Click **Duplicate** when prompted
 
 ### Step 2: Update Agent Configuration
@@ -517,6 +552,9 @@ Now, let's open AI Agent Studio and build another AI agent. This time we will du
 
 7. Click on the existing **"Get Similar Incident Records"** flow action and change the name to `Get Similar Incident Records and Outages`
 8. Select `[Your Initials] Get Similar Records and Outages` as the flow action
+
+![Output Variables Configuration](screenshots/edit-flow-action.png) 
+
 9. Click **Save**
 
 ### Step 4: Add Create Outage Tool
