@@ -6,6 +6,9 @@ Before starting the lab, let's make sure your lab instance is ready.
 
 1. **Log into the instance** with the "Magic link" as Admin
 2. **Navigate to AI Search > AI Search Status**
+
+![AI Search Status](screenshots/ai-search-status.png)
+
 3. **Verify AI Search is Active** - You should see a green check mark like this:
 
 ![AI Search Status](screenshots/ai-search-status-green.png)

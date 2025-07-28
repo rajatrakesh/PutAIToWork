@@ -58,4 +58,4 @@ This workshop was created for technical workshops and covers explanation, code e
 
 ---
 
-*© 2024 ServiceNow, Inc. All rights reserved. This workshop guide is for educational purposes.*
+*© 2025 ServiceNow, Inc. All rights reserved. This workshop guide is for educational purposes.*
