@@ -12,20 +12,27 @@ Now Assist was designed so customers could launch quickly and with minimal lift.
 2. Close the intro splash screen
 
 ![Now Assist Admin Overview](screenshots/now-assist-admin-overview.png)
+![Now Assist Admin Overview](screenshots/now-assist-admin-overview-a.png)
+
+> **Important:** This lab uses Now Assist for IT Service Management and ITOM, but everything we will do mirrors what you would do for customer service cases, HR cases, work orders, etc.
 
 ### Step 2: Enable Now Assist for Virtual Agent
 
 1. Click on **Now Assist Features > Platform > View details** on the Conversational Experience card
 
-![Now Assist Features Platform](screenshots/now-assist-features-platform.png)
+![Now Assist Features Platform](screenshots/now-assist-platform-features.png)
 
 > **Note:** The card pictured might be in a different position on your screen.
 
 2. Click on **Set up Now Assist in Virtual Agent**
+
+![Now Assist Features Platform](screenshots/now-assist-conversational-experience.png)
+
 3. This will open a new tab; close the intro splash screen
 4. Click on **Now Assist in Virtual Agent (default)**
 
-> **Important:** This lab uses Now Assist for IT Service Management and ITOM, but everything we will do mirrors what you would do for customer service cases, HR cases, work orders, etc.
+![Now Assist Features Platform](screenshots/now-assist-assistants.png)
+
 
 ### Step 3: Configure Virtual Agent Settings
 
