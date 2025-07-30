@@ -22,8 +22,6 @@ In Section 4, you will learn how Now Assist enhances AI Search and changes how c
 
 3. In the **search box**, type **"Where can I obtain updates and new releases for Mac OS X"** and select **enter**.
 
-![AI Search Query](screenshots/ai-search-query.png)
-
 **How AI Search Works:** Now Assist uses AI Search to pull the top-ranked knowledge article, then sends it to the Now LLM to generate an answer to the original question. This is a huge time-saver, as employees only need to read part of the knowledge article; we use Now LLM to provide a succinct answer.
 
 ![AI Search Results](screenshots/ai-search-results.png)
@@ -31,8 +29,6 @@ In Section 4, you will learn how Now Assist enhances AI Search and changes how c
 ### Step 4: Provide Feedback
 
 Notice the **"Was this suggestion helpful"** option; when you click the thumbs up or thumbs down, feedback is sent to the Now LLM (if the customer has not opted out of participating in data sharing).
-
-![Search Feedback](screenshots/search-feedback.png)
 
 ## 🎉 Congratulations!
 
@@ -101,8 +97,6 @@ The **"Replacement Laptop"** item will be suggested.
 ### Step 5: Test Dynamic Form Handling
 
 4. If you are prompted for a region, select **"AMS"**, then click **Make Changes**
-
-![Select Region](screenshots/select-region.png)
 
 5. Now type **"Change my region to EMEA"**, then click **Submit**. Notice the change.
 
