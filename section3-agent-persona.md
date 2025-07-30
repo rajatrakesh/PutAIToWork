@@ -10,6 +10,8 @@ In Section 3, we will learn how Now Assist will help an agent close an issue fas
 
 1. Please return to your lab instance by clicking on the **ServiceNow logo** in the upper-left corner. Alternatively, you can remove any portal suffix from your instance URL; for example, my URL looks like this.
 
+![Service Operations Workspace](screenshots/portal-url.png)
+
 2. Select the **Workspace** tab and select **Service Operations Workspace**
 
 ![Service Operations Workspace](screenshots/service-operations-workspace.png)
@@ -26,11 +28,13 @@ Service Operations Workspace provides a consolidated view to aid agents in manag
 
 4. In that list view, select the **filter funnel** on the upper right side.
 
+![Filter Incidents](screenshots/filter-incidents.png)
+
 5. Select the **advanced view** at the bottom and then fill out the conditional filter to find incidents with a short description starting with **"Blocked:"**
 
-6. Select **update** to run the query.
+![Filter Incidents](screenshots/filter-incidents-query.png)
 
-![Filter Incidents](screenshots/filter-incidents.png)
+6. Select **update** to run the query.
 
 ### Step 4: Open Target Incident
 
@@ -100,15 +104,11 @@ You have created an incident summary and posted it to the work notes! Please don
 
    b. Edit the resolution note as needed.
 
-![Edit Resolution Note](screenshots/edit-resolution-note.png)
-
    c. Click **"Resolve"** to save it to the ticket.
 
 ### Step 3: Verify Resolution
 
 4. Select the **details** tab of the Incident. Notice that the resolution was copied to the **Resolution notes** field, and the state of the ticket went from **New** to **Resolved**.
-
-![Resolution Completed](screenshots/resolution-completed.png)
 
 ## 🎉 Congratulations!
 
@@ -145,8 +145,6 @@ With the help of Now Assist, we reviewed and resolved an incident in record time
 ### Step 4: Save Knowledge Article
 
 4. In the **"Knowledge base"** field, select **"IT"**. Then click **"Save"**. The article will be created in a draft state and follow the publishing flow set up by your organization.
-
-![Save Knowledge Article](screenshots/save-knowledge-article.png)
 
 ## 🎉 Congratulations!
 

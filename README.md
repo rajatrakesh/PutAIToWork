@@ -25,7 +25,7 @@ By completing this workshop, you will:
 |---------|-------|----------------|
 | [Lab Configuration](lab-configuration.md) | Initial setup and verification | 5 minutes |
 | [Section 1](section1-start-using-genai.md) | Start using Gen AI on Day 1 | 5 minutes |
-| [Section 2](section2-building-agents.md) | Building Agents and Use Cases | 40 minutes |
+| [Section 2](section2-building-agents-simple.md) | Building Agents and Use Cases | 40 minutes |
 | [Section 3](section3-agent-persona.md) | Now Assist for the Agent Persona | 20 minutes |
 | [Section 4](section4-employee-persona.md) | Now Assist for the Employee Persona | 20 minutes |
 | [Section 5](section5-itops-agent.md) | Now Assist for the IT Ops Agent | 10 minutes |
