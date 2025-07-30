@@ -15,10 +15,13 @@ Before starting the lab, we'll make sure the two skills for Now Assist for ITOM 
 ### Step 1: Enable ITOM Skills
 
 1. Navigate to **All > Now Assist Admin > Features**.
+
+![ITOM Skills](screenshots/itom-skills.png)
+
 2. Under **Technology**, select **ITOM**.
 3. Click **View details**.
 
-![ITOM Skills](screenshots/itom-skills.png)
+![ITOM Skills](screenshots/itom-active-skills.png)
 
 Both skills should be active:
 - Alert Analysis
@@ -56,15 +59,13 @@ As an operator, when John Parker logs in, he is directed to the Service Operatio
 
 4. Close the popup window that appears.
 
-![Express List Popup](screenshots/express-list-popup.png)
-
 ### Step 3: Adjust Time Window
 
 Normally, an operator would see alerts that are being reported by monitoring tools in the Express List in near real time. For the purposes of this lab, alerts have been captured and pre-loaded onto your instance. Due to this, the times for when the alerts happened may not be recent enough to appear in the default window, so let's expand the window.
 
 5. On the upper right on the Express List, click on the dropdown that says **Last 24 hours** and change it to say **All Time**. This will show alerts that came into the system.
 
-![Change Time Window](screenshots/change-time-window.png)
+![Express List Popup](screenshots/express-list-popup.png)
 
 The Express List should now show more alerts and some alert groups. You will see FEWER than this screen shot!
 
@@ -96,7 +97,7 @@ In this part of the lab, you will leverage Now Assist for ITOM as an operator to
 
 2. Click on the **Analyze** button. It may take a few moments to return as information about the group of alerts is being analyzed by Now Assist for ITOM.
 
-![Analyze Button](screenshots/analyze-button.png)
+![Analyze Button](screenshots/alert-analyze-button.png)
 
 ### Step 3: Review Analysis Results
 
@@ -115,7 +116,6 @@ In this part of the lab, you will leverage Now Assist for ITOM as an operator to
 
 4. When you are done reading the analysis, end the impersonation by clicking on the **user icon** in the upper right and clicking **End impersonation**.
 
-![End Impersonation](screenshots/end-impersonation.png)
 
 ## 🎉 Congratulations! 
 
