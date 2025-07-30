@@ -78,11 +78,9 @@ This section will examine how Now Assist for Creator provides power tools for de
 
 2. Select **New** in the upper right-hand corner.
 
-![New Script Include](screenshots/new-script-include.png)
-
 3. Close any popups that appear, then give the Script Include a **Name** (e.g., `[Your initials] Test Script`) and a **Description** of `"My first test script"`.
 
-![Script Include Details](screenshots/script-include-details.png)
+![New Script Include](screenshots/new-script-include.png)
 
 ### Step 3: Generate Code with AI
 
@@ -92,19 +90,13 @@ This section will examine how Now Assist for Creator provides power tools for de
 //predict assignment group using predictive intelligence classification model
 ```
 
-![Code Generation Prompt](screenshots/code-generation-prompt.png)
-
 5. Now, hit **CMD + Return (Mac)** or **CTRL + ENTER (Windows)**
 
 **AI Code Generation in Action:** This feature allows you to use Now Assist to write a custom script based on your instructions.
 
-![Generated Code](screenshots/generated-code.png)
-
 ### Step 4: Save Your Work
 
 6. When you are finished, click **Submit**
-
-![Submit Script](screenshots/submit-script.png)
 
 **What Now Assist Generated:**
 - Complete function implementation
