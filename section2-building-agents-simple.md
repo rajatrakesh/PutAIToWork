@@ -144,7 +144,7 @@ Create the following tools by selecting the **Add tool** option:
 11. Click **Add**
 
 #### Tool 4: Knowledge Search
-12. Create the final tool by selecting **Add Tool** again:
+12. Create another tool by selecting **Add Tool** again:
 - **Select:** Search retrieval
 - **Name:** `Knowledge search`
 - **Description:** `Search for knowledge articles related to the incident that triggered this AI agent`
@@ -157,7 +157,49 @@ Create the following tools by selecting the **Add tool** option:
 - **Execution mode:** Autonomous
 - **Display output:** Yes
 
-12. Click **Add**
+13. Click **Add**
+
+#### Tool 5: Update Resolution Notes to Incident
+14. Create the final tool by selecting **Add Tool** again:
+- **Select**: Add Script
+- **Name**: `Add Solution to incident additional comment`
+- **Description**: `This adds the resolution plan to the incident's additional comments. It then outputs whether or not the resolution was successful.`
+- Create 2 Script Inputs:
+-- parameter `comments` with Description `comment to add to the given incident's additional comments`
+-- parameter `incident_number` with Description `Given incident number to add comments to`
+
+15. Paste the following script:
+
+```
+(function(inputs) {
+    var comments = gs.getMessage('[Now assist generated] \n\n {0}', [inputs['comment']]);
+
+    var incidentGr = new GlideRecordSecure('incident');
+    incidentGr.addQuery('number', inputs['incident_number']);
+    incidentGr.query();
+    if (incidentGr.next()) {
+        incidentGr.comments = comments;
+        if (!incidentGr.update()){
+            return {
+                response: false,
+                reason: gs.getMessage('Update to comments did not happen successfully.')
+            };
+        }
+        return {
+            response: true,
+            reason: gs.getMessage('The update to additional comments happened successfully.')
+        };
+    }
+    return {
+        response: false,
+        reason: gs.getMessage('Incident not found.')
+    };
+})(inputs);
+``` 
+- **Execution mode:** Supervised
+- **Display output:** No
+- **Output transformation strategy:** None
+- **Click** Add.
 
 ### Step 4: Finalize Agent Configuration
 
