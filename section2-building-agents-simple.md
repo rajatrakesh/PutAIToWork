@@ -159,13 +159,15 @@ Create the following tools by selecting the **Add tool** option:
 
 13. Click **Add**
 
+[Optional] Use either Tool 2 or Tool 5. 
+
 #### Tool 5: Update Resolution Notes to Incident
 14. Create the final tool by selecting **Add Tool** again:
 - **Select**: Add Script
 - **Name**: `Add Solution to incident additional comment`
 - **Description**: `This adds the resolution plan to the incident's additional comments. It then outputs whether or not the resolution was successful.`
 - Create 2 Script Inputs:
--- parameter `comments` with Description `comment to add to the given incident's additional comments`
+-- parameter `comment` with Description `comment to add to the given incident's additional comments`
 -- parameter `incident_number` with Description `Given incident number to add comments to`
 
 15. Paste the following script:
